@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oqoqo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="30" height="30" fill="#000000" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1"/>
+                        <ellipse cx="16" cy="16" rx="7" ry="10" fill="#ffffff"/>
+                    </svg>
+                    <span class="logo-text">oqoqo</span>
+                </div>
+                <div class="cta-button">
+                    <button class="btn-primary" onclick="openModal()">GET STARTED <span class="arrow-icon">↗</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="hero-section">
+                <h1 class="hero-title">Self-evolving documentation</h1>
+                <p class="hero-subtitle">
+                    Documentation that writes itself, updates automatically, and evolves with your codebase. 
+                    Never worry about outdated docs again.
+                </p>
+                <div class="hero-content">
+                    <p class="content-text">
+                        Traditional documentation becomes stale the moment it's written. oqoqo changes that 
+                        by creating living documentation that understands your code, tracks changes, and 
+                        updates itself automatically.
+                    </p>
+                    <p class="content-text">
+                        Our AI analyzes your codebase, understands patterns and relationships, then generates 
+                        comprehensive documentation that stays current with every commit. From API references 
+                        to architectural overviews, everything evolves with your project.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <aside class="features-sidebar">
+            <div class="features-container">
+                <div class="feature-item">
+                    <span class="feature-number">01</span>
+                    <span class="feature-text">Self-updating based on PRs</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-number">02</span>
+                    <span class="feature-text">Staleness and conflict checker</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-number">03</span>
+                    <span class="feature-text">Answer in Slack and IDE</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-number">04</span>
+                    <span class="feature-text">Action-based bot</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-number">05</span>
+                    <span class="feature-text">Centralized source of truth</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Email Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2 class="modal-title">Get Started</h2>
+            <p class="modal-text">Contact us:</p>
+            <a href="mailto:renzo@oqoqo.ai" class="modal-email">renzo@oqoqo.ai</a>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('emailModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('emailModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('emailModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
