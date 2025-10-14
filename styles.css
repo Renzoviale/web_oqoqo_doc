@@ -149,6 +149,7 @@ body {
         linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
     background-size: 20px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Right stripe pattern - middle to bottom */
